@@ -1,0 +1,9 @@
+name: "Upload Artifacts to S3"
+description: "Upload an object to an S3 bucket."
+author: "patoxs"
+runs:
+  using: docker
+  image: Dockerfile
+branding:
+  icon: arrow-up
+  color: orange
