@@ -32,7 +32,8 @@ echo "[default]
 aws_access_key_id = ${AWS_ACCESS_KEY_ID}
 aws_secret_access_key = ${AWS_SECRET_ACCESS_KEY}" > ~/.aws/credentials
 
-ls -la /public
+pwd
+ls -la public
 
 #aws s3 cp . s3://${S3_BUCKET} --region ${AWS_REGION} --recursive $*
 
