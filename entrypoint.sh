@@ -33,9 +33,9 @@ aws_access_key_id = ${AWS_ACCESS_KEY_ID}
 aws_secret_access_key = ${AWS_SECRET_ACCESS_KEY}" > ~/.aws/credentials
 
 pwd
-ls -la public
+ls -la ${DIRECTORY_TO_COPY}
 
-#aws s3 cp . s3://${S3_BUCKET} --region ${AWS_REGION} --recursive $*
+aws s3 cp ${DIRECTORY_TO_COPY} s3://${S3_BUCKET} --region ${AWS_REGION} --recursive $*
 
 rm -rf ~/.aws
 
