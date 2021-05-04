@@ -32,14 +32,7 @@ echo "[default]
 aws_access_key_id = ${AWS_ACCESS_KEY_ID}
 aws_secret_access_key = ${AWS_SECRET_ACCESS_KEY}" > ~/.aws/credentials
 
-pwd
-echo "Content DIRECTORY_TO_COPY"
-ls -la ${DIRECTORY_TO_COPY}
-
-echo "Content BUCKET"
-aws s3 ls s3://${S3_BUCKET}
-
-aws s3 cp ${DIRECTORY_TO_COPY} s3://${S3_BUCKET} $*
+sh -c "aws s3 cp ${DIRECTORY_TO_COPY} s3://${S3_BUCKET} $*" 
 
 rm -rf ~/.aws
 
