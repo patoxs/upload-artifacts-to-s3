@@ -39,7 +39,7 @@ ls -la ${DIRECTORY_TO_COPY}
 echo "Content BUCKET"
 aws s3 ls s3://${S3_BUCKET}
 
-aws s3 cp ${DIRECTORY_TO_COPY} s3://${S3_BUCKET} --region ${AWS_REGION} --recursive
+aws s3 cp ${DIRECTORY_TO_COPY} s3://${S3_BUCKET} $*
 
 rm -rf ~/.aws
 
