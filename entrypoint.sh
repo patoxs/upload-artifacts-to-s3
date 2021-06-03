@@ -33,7 +33,7 @@ aws_access_key_id = ${AWS_ACCESS_KEY_ID}
 aws_secret_access_key = ${AWS_SECRET_ACCESS_KEY}" > ~/.aws/credentials
 
 sh -c "zip -r artefactos-simple.zip ${DIRECTORY_TO_COPY}"
-sh -c "aws s3 cp artefactos-simple.tar s3://${S3_BUCKET} $*" 
+sh -c "aws s3 cp artefactos-simple.zip s3://${S3_BUCKET} $*" 
 
 rm -rf ~/.aws
 
