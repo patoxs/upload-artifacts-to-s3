@@ -1,5 +1,7 @@
 FROM patoxs/awscli:latest
 
+RUN apt update && apt install zip -y
+
 LABEL maintainer="patoxs <patonxs@gmail.com>"
 
 WORKDIR /app
